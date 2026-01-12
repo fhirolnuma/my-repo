@@ -6,3 +6,4 @@ jobs:
     steps:
       - run: echo "${{ github.actor }}"  # githubコンテキストの参照
       - run: echo "${{ github.job }}"  # githubコンテキストの参照
+      - run: echo "${{ runner.os }}"  # githubコンテキストの参照
