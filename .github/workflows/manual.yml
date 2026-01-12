@@ -1,0 +1,14 @@
+name: Manual
+on:
+  workflow_dispatch:                       # 手動実行イベント
+    inputs:
+      greeting:                            # 入カパラメータ名
+        type: string                       # データ型（文字列）
+        default: Hello.                    # 入カパラメータのデフォルト値
+        required: true                     # 入カパラメータの必須フラグ
+        description: A cheerful word       # 入カパラメータの概要
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ inputs.greeting }}" # 入カパラメータ「greeting」の参照
