@@ -4,7 +4,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     env:
-      BRANCH: main-main                 # ジョブレベルで、環境変数を定義
+      BRANCH: main                 # ジョブレベルで、環境変数を定義
     steps:
       - run: echo "${BRANCH}"      # シェルコマンドから、ジョブレベルの環境変数を参照
       - uses: actions/checkout@v4
